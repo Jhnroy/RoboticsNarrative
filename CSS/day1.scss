@@ -71,13 +71,39 @@ body, *{
     background-color: #D9D9D9;
 }
 
+#SectionCointainer div h1{
+    text-align: center;
+}
+
+.content {
+    text-align: justify;
+    line-height: 3;
+    font-size: 3vh;
+    margin: 5rem;
+    background-color: #800000;
+    color: white;
+    padding: 2rem;
+    border-radius: 16px;
+}
 #spfooter{
     width: 123.875rem;
     height: 24.875rem;
     background-color: #800000;
     color: white;
-    padding: 20px 20px 20px 20px;
+    padding: 1.25rem 1.25rem 1.25rem 1.25rem;
     position: relative;
     top: 0;
     bottom: 0;
+}
+
+@media (max-width: 768px) {
+    #spfooter {
+        width: 100%; /* Make the footer full width */
+        height: auto; /* Let the height adjust based on content */
+    }
+
+    .content {
+        text-align: justify; /* Align text to the left for better readability on smaller screens */
+        font-size: 1.5vh;
+    }
 }

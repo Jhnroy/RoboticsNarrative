@@ -1,17 +1,20 @@
 body, * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   font-family: Helvetica, sans-serif;
 }
 
 #mainHeader {
   background-color: #800000;
   height: 9.125rem;
+  position: -webkit-sticky;
   position: sticky;
   top: 0;
   z-index: 1;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 /* Lines of the Toggler */
@@ -20,6 +23,7 @@ body, * {
   height: 3px;
   background-color: #e74c3c;
   display: block;
+  -webkit-transition: all 0.2s;
   transition: all 0.2s;
 }
 
@@ -30,8 +34,10 @@ body, * {
 
 /* State when navbar is opened (START) */
 .navbar-toggler .top-bar {
-  transform: rotate(45deg);
-  transform-origin: 10% 10%;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  -webkit-transform-origin: 10% 10%;
+          transform-origin: 10% 10%;
 }
 
 .navbar-toggler .middle-bar {
@@ -40,14 +46,17 @@ body, * {
 }
 
 .navbar-toggler .bottom-bar {
-  transform: rotate(-45deg);
-  transform-origin: 10% 90%;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  -webkit-transform-origin: 10% 90%;
+          transform-origin: 10% 90%;
 }
 
 /* State when navbar is opened (END) */
 /* State when navbar is collapsed (START) */
 .navbar-toggler.collapsed .top-bar {
-  transform: rotate(0);
+  -webkit-transform: rotate(0);
+          transform: rotate(0);
 }
 
 .navbar-toggler.collapsed .middle-bar {
@@ -56,7 +65,8 @@ body, * {
 }
 
 .navbar-toggler.collapsed .bottom-bar {
-  transform: rotate(0);
+  -webkit-transform: rotate(0);
+          transform: rotate(0);
 }
 
 /* State when navbar is collapsed (END) */
@@ -69,13 +79,43 @@ body, * {
   background-color: #D9D9D9;
 }
 
+#SectionCointainer div h1 {
+  text-align: center;
+}
+
+.content {
+  text-align: justify;
+  line-height: 3;
+  font-size: 3vh;
+  margin: 5rem;
+  background-color: #800000;
+  color: white;
+  padding: 2rem;
+  border-radius: 16px;
+}
+
 #spfooter {
   width: 123.875rem;
   height: 24.875rem;
   background-color: #800000;
   color: white;
-  padding: 20px 20px 20px 20px;
+  padding: 1.25rem 1.25rem 1.25rem 1.25rem;
   position: relative;
   top: 0;
   bottom: 0;
-}/*# sourceMappingURL=day1.css.map */
+}
+
+@media (max-width: 768px) {
+  #spfooter {
+    width: 100%;
+    /* Make the footer full width */
+    height: auto;
+    /* Let the height adjust based on content */
+  }
+  .content {
+    text-align: justify;
+    /* Align text to the left for better readability on smaller screens */
+    font-size: 1.5vh;
+  }
+}
+/*# sourceMappingURL=day1.css.map */

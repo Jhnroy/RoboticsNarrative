@@ -82,165 +82,67 @@ navbar-toggler {
 }
 
 
+//carousel
+.carousel {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    margin: 0 auto;
+}
 
-// #DepartmentContainer{
-//     display: grid;
-//     grid-template-columns: repeat(3, 1fr);
-//     grid-gap: 1.25rem;
-//     justify-content: center;
-//     align-items: center;
-//     height: 100vh;
-//     place-items: center;
-// }
+.carousel-container {
+    display: flex;
+    transition: transform 0.5s ease;
+}
 
-// #CASDept{
-//     display: flex;
-//     align-items: center;
-//     justify-content: center;
-//     text-align: center;
-//     background-color: #800000;
-//     border-radius: 24px;
-//     font-weight: bold;
-//     cursor: pointer;
-//     color: white;
-//     width: 15.813rem;
-//     height: 11.625rem;
-//     border: none;
-//     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-// }
+.carousel-item {
+    flex: 0 0 100%;
+}
 
-// #CANRDept{
-//     display: flex;
-//     align-items: center;
-//     justify-content: center;
-//     text-align: center;
-//     background-color: #e23434;
-//     font-weight: bold;
-//     border-radius: 24px;
-//     cursor: pointer;
-//     color: white;
-//     width: 15.813rem;
-//     height: 11.625rem;
-//     border: none;
-//     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-// }
-// #COEDDept{
-//     display: flex;
-//     align-items: center;
-//     justify-content: center;
-//     text-align: center;
-//     background-color: #8d31d3;
-//     font-weight: bold;
-//     border-radius: 24px;
-//     cursor: pointer;
-//     color: white;
-//     width: 15.813rem;
-//     height: 11.625rem;
-//     border: none;
-//     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-// }
+.carousel-item img {
+    width: 100%;
+    height: auto;
+}
 
-// #CoengDept{
-//     display: flex;
-//     align-items: center;
-//     justify-content: center;
-//     text-align: center;
-//     background-color: #ced41f;
-//     font-weight: bold;
-//     border-radius: 24px;
-//     cursor: pointer;
-//     color: white;
-//     width: 15.813rem;
-//     height: 11.625rem;
-//     border: none;
-//     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-// }
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    z-index: 2;
+}
 
-// #CBPADept{
-//     display: flex;
-//     align-items: center;
-//     justify-content: center;
-//     text-align: center;
-//     background-color: #d7ce19;
-//     font-weight: bold;
-//     border-radius: 24px;
-//     cursor: pointer;
-//     color: white;
-//     width: 15.813rem;
-//     height: 11.625rem;
-//     border: none;
-//     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-// }
+.carousel-btn-prev {
+    left: 10px; /* Adjusting the positioning of the buttons */
+}
+
+.carousel-btn-next {
+    right: 10px; /* Adjusting the positioning of the buttons */
+}
 
 
-// #COTTDept{
-//     display: flex;
-//     align-items: center;
-//     justify-content: center;
-//     text-align: center;
-//     background-color: #d7ce19;
-//     font-weight: bold;
-//     border-radius: 24px;
-//     cursor: pointer;
-//     color: white;
-//     width: 15.813rem;
-//     height: 11.625rem;
-//     border: none;
-//     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-// }
-// #ICSDept{
-//     display: flex;
-//     align-items: center;
-//     justify-content: center;
-//     text-align: center;
-//     background-color: #78786d;
-//     font-weight: bold;
-//     border-radius: 24px;
-//     cursor: pointer;
-//     color: white;
-//     width: 15.813rem;
-//     height: 11.625rem;
-//     border: none;
-//     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-// }
-// #IFMSDept{
-//     display: flex;
-//     align-items: center;
-//     justify-content: center;
-//     text-align: center;
-//     background-color: #1e35e2;
-//     font-weight: bold;
-//     border-radius: 24px;
-//     cursor: pointer;
-//     color: white;
-//     width: 15.813rem;
-//     height: 11.625rem;
-//     border: none;
-//     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-// }
-// #Entienza{
-//     display: flex;
-//     align-items: center;
-//     justify-content: center;
-//     text-align: center;
-//     background-color: #e2321e;
-//     font-weight: bold;
-//     border-radius: 24px;
-//     cursor: pointer;
-//     color: white;
-//     width: 15.813rem;
-//     height: 11.625rem;
-//     border: none;
-//     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-// }
 
 #spfooter{
     width: 123.875rem;
     height: 24.875rem;
     background-color: #800000;
     color: white;
-    padding: 20px 20px 20px 20px;
+    padding: 1.25rem 1.25rem 1.25rem 1.25rem;
     position: relative;
     top: 0;
     bottom: 0;
+}
+
+@media (max-width: 768px) {
+    #spfooter {
+        width: 100%; /* Make the footer full width */
+        height: auto; /* Let the height adjust based on content */
+    }
+    .carousel-container {
+        width: calc(100% * 3); /* Ensuring the container is wide enough to hold all slides */
+    }
 }

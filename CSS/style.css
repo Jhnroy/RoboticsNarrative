@@ -1,17 +1,20 @@
 body, * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   font-family: Helvetica, sans-serif;
 }
 
 #mainHeader {
   background-color: #800000;
   height: 9.125rem;
+  position: -webkit-sticky;
   position: sticky;
   top: 0;
   z-index: 1;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 navbar-toggler {
@@ -22,7 +25,8 @@ navbar-toggler {
 .navbar-toggler:active,
 .navbar-toggler-icon:focus {
   outline: none !important;
-  box-shadow: none !important;
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
   border: 0 !important;
 }
 
@@ -32,6 +36,7 @@ navbar-toggler {
   height: 3px;
   background-color: #e74c3c;
   display: block;
+  -webkit-transition: all 0.2s;
   transition: all 0.2s;
 }
 
@@ -42,8 +47,10 @@ navbar-toggler {
 
 /* State when navbar is opened (START) */
 .navbar-toggler .top-bar {
-  transform: rotate(45deg);
-  transform-origin: 10% 10%;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  -webkit-transform-origin: 10% 10%;
+          transform-origin: 10% 10%;
 }
 
 .navbar-toggler .middle-bar {
@@ -52,14 +59,17 @@ navbar-toggler {
 }
 
 .navbar-toggler .bottom-bar {
-  transform: rotate(-45deg);
-  transform-origin: 10% 90%;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  -webkit-transform-origin: 10% 90%;
+          transform-origin: 10% 90%;
 }
 
 /* State when navbar is opened (END) */
 /* State when navbar is collapsed (START) */
 .navbar-toggler.collapsed .top-bar {
-  transform: rotate(0);
+  -webkit-transform: rotate(0);
+          transform: rotate(0);
 }
 
 .navbar-toggler.collapsed .middle-bar {
@@ -68,7 +78,8 @@ navbar-toggler {
 }
 
 .navbar-toggler.collapsed .bottom-bar {
-  transform: rotate(0);
+  -webkit-transform: rotate(0);
+          transform: rotate(0);
 }
 
 /* State when navbar is collapsed (END) */
@@ -81,13 +92,78 @@ navbar-toggler {
   background-color: #D9D9D9;
 }
 
+.carousel {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.carousel-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-transition: -webkit-transform 0.5s ease;
+  transition: -webkit-transform 0.5s ease;
+  transition: transform 0.5s ease;
+  transition: transform 0.5s ease, -webkit-transform 0.5s ease;
+}
+
+.carousel-item {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 100%;
+          flex: 0 0 100%;
+}
+
+.carousel-item img {
+  width: 100%;
+  height: auto;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.carousel-btn-prev {
+  left: 10px;
+  /* Adjusting the positioning of the buttons */
+}
+
+.carousel-btn-next {
+  right: 10px;
+  /* Adjusting the positioning of the buttons */
+}
+
 #spfooter {
   width: 123.875rem;
   height: 24.875rem;
   background-color: #800000;
   color: white;
-  padding: 20px 20px 20px 20px;
+  padding: 1.25rem 1.25rem 1.25rem 1.25rem;
   position: relative;
   top: 0;
   bottom: 0;
-}/*# sourceMappingURL=style.css.map */
+}
+
+@media (max-width: 768px) {
+  #spfooter {
+    width: 100%;
+    /* Make the footer full width */
+    height: auto;
+    /* Let the height adjust based on content */
+  }
+  .carousel-container {
+    width: calc(100% * 3);
+    /* Ensuring the container is wide enough to hold all slides */
+  }
+}
+/*# sourceMappingURL=style.css.map */
